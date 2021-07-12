@@ -1,0 +1,17 @@
+<%- include("./partials/header")%>
+<div class="container viewPage">
+  <h1>Search Results are!</h1>
+  <div class="row">
+    <% data["Search"].forEach(function(movie) { %>
+    <div class="card" style="width: 18rem; margin-left: 70px; margin-top: 10px; background-color:#e1eded;">
+      <img class="card-img-top" src="<%=movie.Poster%>" alt="Image Not Found" />
+      <div class="card-body">
+        <h4 class="card-title"><%=movie["Title"]%></h4>
+        <h6 class="card-text">Released on <%=movie["Year"]%></h6>
+        <a href="/result/<%=movie["imdbID"]%>" class="btn btn-primary">Know More</a>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+<%- include("./partials/footer")%>

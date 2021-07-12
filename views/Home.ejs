@@ -1,0 +1,52 @@
+<%- include("./partials/header")%>
+<!--Main Page-->
+<div class="container">
+  <style>
+    .button:hover {
+      background-color: green;
+      color: white;
+    }
+  
+    .logo {
+      text-align: center;
+      margin-top: 230px;
+      font-weight: bold;
+      font-size: 8vmin;
+    }
+  
+    .button {
+      height: calc(1.5em + .75rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      cursor: pointer;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      color: #28a745;
+      border-color: #28a745;
+    }
+    #srch {
+      width: 100vmin;
+    }
+    #bar {
+      margin-right: auto !important;
+      margin-left: auto;
+    }
+  </style>
+  <h1 class="logo">
+    iMohak
+  </h1>
+  <form class="form-inline my-2 my-lg-0" action="/result" method="GET">
+    <div id="bar">
+      <input class="form-control mr-sm-2" id="srch" type="search" placeholder="Enter Movie Name" aria-label="Search"
+        name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </div>
+  </form>
+  
+</div>
+<%- include("./partials/footer")%>
